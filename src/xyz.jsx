@@ -14,3 +14,15 @@ function Xyz() {
 }
 
 export default Xyz;
+function Xyz() {
+  const name = "Ami";
+
+  return (
+    <div>
+      <h2>Hello React</h2>
+      <p>My name is {name}</p>
+    </div>
+  );
+}
+
+export default Xyz;
