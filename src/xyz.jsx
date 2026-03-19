@@ -89,3 +89,24 @@ function Xyz() {
 }
 
 export default Xyz;
+
+import { useState } from "react";
+
+function Xyz() {
+  const [text, setText] = useState("");
+
+  return (
+    <div>
+      <h2>Input Practice</h2>
+      <input
+        type="text"
+        placeholder="Type something"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <p>You typed: {text}</p>
+    </div>
+  );
+}
+
+export default Xyz;
