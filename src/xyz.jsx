@@ -43,3 +43,18 @@ function Xyz() {
 }
 
 export default Xyz;
+
+function Xyz() {
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+
+  return (
+    <div>
+      <h2>Click Practice</h2>
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+  );
+}
+
+export default Xyz;
