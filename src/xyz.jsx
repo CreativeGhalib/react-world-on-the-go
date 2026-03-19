@@ -110,3 +110,20 @@ function Xyz() {
 }
 
 export default Xyz;
+
+import { useState } from "react";
+
+function Xyz() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return (
+    <div>
+      <h2>{isLoggedIn ? "Welcome back!" : "Please login"}</h2>
+      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        {isLoggedIn ? "Logout" : "Login"}
+      </button>
+    </div>
+  );
+}
+
+export default Xyz;
