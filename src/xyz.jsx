@@ -127,3 +127,25 @@ function Xyz() {
 }
 
 export default Xyz;
+\
+import { useEffect, useState } from "react";
+
+function Xyz() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div>
+      <h2>Timer: {seconds}s</h2>
+    </div>
+  );
+}
+
+export default Xyz;
